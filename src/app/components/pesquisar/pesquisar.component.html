@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<mat-form-field appearance="outline" class="example-full-width" style="font-size: 2em">
+  <mat-label>Pesquisar Filme</mat-label>
+  <input type="text" matInput #nome  (keyup)="buscar(nome.value)" placeholder="Digite nome do filme" />
+</mat-form-field>
+
+
+<div class="my-flex" *ngIf="filmes">
+        
+        <div class="row" *ngFor="let a of filmes.results">
+          <!-- <img class="card-img-top" [src]="a | filmeImagem" alt="Card image cap" /> -->
+      
+        
+            <mat-card class="example-card" (click)=verfilme(a.id)>
+              <mat-card-header>
+                <mat-card-title>{{a.title | limitTo: 25}}</mat-card-title>
+              </mat-card-header>
+              <img mat-card-image width="400px" height="400px" [src]="a | filmeImagem" alt="Card image cap" />
+              <mat-card-content>
+                <p>
+                    {{a.overview | limitTo: 160}}
+                </p>
+                <p> <button mat-button>Saiba mais</button></p>
+              </mat-card-content>
+            </mat-card>
+      
+      
+          </div>
+      
+        </div>

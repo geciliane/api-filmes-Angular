@@ -1,0 +1,28 @@
+<div class="container main-container animated fadeIn fast">
+    <div class="row">
+
+        <div class="col-md-5">
+            <img [src]="filme | filmeImagem" [alt]="filme.original_title" class="img-thumbnail img-fluid">
+        </div>
+
+
+        <div class="col-md-7">
+            <h3>Sinopse</h3>
+            <hr>
+            <p class="text-justify">
+                {{ filme.overview }}
+            </p>
+
+            <p>
+                Popularidade: <span class="badge badge-primary">{{ filme.popularity | number:".0-0" }}/10</span>
+                <br>
+                Média: <span class="badge badge-primary">{{ filme.vote_average }}</span>
+            </p>
+
+            <button [routerLink]="['/home']" type="button" class="btn btn-outline-danger">
+                Voltar
+            </button>
+
+        </div>
+    </div>
+    

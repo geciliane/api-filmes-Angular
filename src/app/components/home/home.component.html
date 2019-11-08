@@ -1,0 +1,25 @@
+<div class="my-flex" *ngIf="filmes">
+
+  <div class="row" *ngFor="let a of filmes.results">
+    <!-- <img class="card-img-top" [src]="a | filmeImagem" alt="Card image cap" /> -->
+    <mat-card class="example-card" (click)="verfilme(a.id)">
+      <mat-card-header>
+        <mat-card-title>{{a.title | limitTo: 25}}</mat-card-title>
+        <mat-card-subtitle>{{a.release_date | date: 'dd/MMMM/yyyy' }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image width="400px" height="400px" [src]="a | filmeImagem" alt="Card image cap" />
+      <div class="conteudo">
+      <mat-card-content style="float: right">
+        <p>
+          <!-- {{a.overview | limitTo:100}} {{a.overview.length >= 100 ? '...' : ''}} -->
+          {{a.overview | limitTo: 160}}
+        </p>
+        <p> <button [routerLink]="['/filme', a.id]" mat-button>Saiba mais</button></p>
+      </mat-card-content>
+    </div>
+
+    </mat-card>
+
+  </div>
+
+</div>

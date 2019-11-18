@@ -10,16 +10,10 @@ import { ActivatedRoute } from '@angular/router';
 
 export class FilmeComponent {
   
-  @Input() filmes: any[] = [];
-  
   filme: any = {};
-
-  // loadingPelicula: boolean;
 
   constructor(private router: ActivatedRoute,
     private FilmeService: FilmeService) {
-
-    // this.loadingPelicula = true;
 
     this.router.params.subscribe(params => {
       console.log(params);
@@ -28,7 +22,6 @@ export class FilmeComponent {
         .subscribe(filme => {
           console.log(filme);
           this.filme = filme;
-          // this.loadingPelicula = false;
         })
     })
 

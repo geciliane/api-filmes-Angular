@@ -1,0 +1,22 @@
+.example-card {
+    max-width: 400px;
+    height: 630px;
+    overflow: hidden;
+    margin: 5%;
+
+  }
+
+  .my-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  
+.imagem{
+  display: flex;
+  float: left;
+}
+.conteudo{
+  float: right;
+}

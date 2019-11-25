@@ -17,7 +17,7 @@
       <img mat-card-image width="400px" height="400px" [src]="filme | filmeImagem" alt="Card image cap" />
       <mat-card-content>
         <p>
-          {{a.overview | limitTo: 160}}
+          {{filme.overview | limitTo: 160}}
         </p>
         <p> <button mat-button>Saiba mais</button></p>
       </mat-card-content>

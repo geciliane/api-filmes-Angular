@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class FilmeComponent {
   
   filme: any = {};
-
+  sessao: any = {};
   constructor(private router: ActivatedRoute,
     private FilmeService: FilmeService) {
 
@@ -26,5 +26,11 @@ export class FilmeComponent {
     })
 
   }
+  // geraSessao(){
+  //     this.FilmeService.sessaoGuest().subscribe(sessao =>{
+  //       console.log(sessao);
+  //       this.sessao = sessao;
+  //     })
+  // }
 
 }

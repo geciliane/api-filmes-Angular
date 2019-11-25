@@ -9,7 +9,7 @@ import { ActivatedRoute, Router, Params } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   filmes: any;
-  filme;
+
   
   constructor(private router: Router, private filmeService: FilmeService ) {
    }

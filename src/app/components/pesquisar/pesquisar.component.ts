@@ -24,7 +24,7 @@ filmes: any [] = [];
   }
 
     verfilme(id){
-      this.router.navigate(['/filme',id]);
+      this.router.navigate(['/fillme',id]);
   }
  
 

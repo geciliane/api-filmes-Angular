@@ -8,13 +8,13 @@
 
 <div class="my-flex" *ngIf="filmes">
 
-  <div class="row" *ngFor="let a of filmes.results">
+  <div class="row" *ngFor="let filme of filmes.results">
 
-    <mat-card class="example-card" (click)=verfilme(a.id)>
+    <mat-card class="example-card" (click)=verfilme(filme.id)>
       <mat-card-header>
-        <mat-card-title>{{a.title | limitTo: 25}}</mat-card-title>
+        <mat-card-title>{{filme.title | limitTo: 25}}</mat-card-title>
       </mat-card-header>
-      <img mat-card-image width="400px" height="400px" [src]="a | filmeImagem" alt="Card image cap" />
+      <img mat-card-image width="400px" height="400px" [src]="filme | filmeImagem" alt="Card image cap" />
       <mat-card-content>
         <p>
           {{a.overview | limitTo: 160}}
